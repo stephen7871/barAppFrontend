@@ -72,12 +72,6 @@ const personAsObjectAgain = JSON.parse(stringifiedPerson);
             <Link to="/MyPost">My Post</Link>
           </li>
           <li>
-            <Link to="/Chats">Chat</Link>
-          </li>
-          <li>
-            <Link to="/Map">Map</Link>
-          </li>
-          <li>
             <Link to="/MyProfile">MyProfile</Link>
           </li>
           <li>

@@ -12,10 +12,10 @@ import Navbar from '../Navbar/Navbar';
 //import { getUsers } from '../../actions/posts';
 import MyPost from '../postComponents/MyPost';
 //import Chat from '../../pages/Chat';
-import Chatpage from '../../Pages/Chatpage';
+
 import Homepage from '../../Pages/Homepage';
-import GoogleMaps from '../map/GoogleMaps';
-import MapList from '../map/MapList';
+
+
 import { useSelector } from 'react-redux';
 import MyProfile from '../postComponents/myProfile/MyProfile';
 //import SetAvatar from '../SetAvatar';
@@ -61,12 +61,10 @@ const Home = (props ) => {
             <Route path="NewPost" element={<NewPost currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>
            
             <Route path="MyPost" element={<MyPost currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>
-            <Route path="Map" element={
-                 <GoogleMaps  currentId={props.currentId} setCurrentId={props.setCurrentId}/>
-            }/>  
+            
             <Route path="MyProfile" element={<MyProfile currentId={props.currentId} setCurrentId={props.setCurrentId} user={username} setUser={setUserName}/>}/>
             {/* <Route path="SetAvatar" element={<SetAvatar/>}/> */}
-            <Route path= "chats" element={<Chatpage />} /> 
+            
             </Routes>
             </div>           
              
