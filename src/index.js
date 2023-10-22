@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
-import ChatProvider from "./Context/ChatProvider";
+
 import { BrowserRouter } from "react-router-dom";
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
@@ -18,9 +18,9 @@ ReactDOM.render(
   <Provider store={store}>
   <ChakraProvider>
     <BrowserRouter>
-      <ChatProvider>
+     
         <App />
-      </ChatProvider>
+     
     </BrowserRouter>
   </ChakraProvider>
   </Provider>,
