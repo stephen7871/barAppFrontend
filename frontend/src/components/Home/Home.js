@@ -39,9 +39,17 @@ const Home = (props ) => {
   //   dispatch(getUsers());
   // }, [currentId, dispatch]);
 
-  useEffect(async() => {
-      dispatch(getPosts());
-  }, [currentId, dispatch]);
+  // useEffect(async() => {
+  //     dispatch(getPosts());
+  // }, [currentId, dispatch]);
+
+  useEffect(() => {
+    async function getAllPosts(){
+      await dispatch(getPosts());
+    }
+    getAllPosts();
+    
+}, [currentId, dispatch]);
 
   
   

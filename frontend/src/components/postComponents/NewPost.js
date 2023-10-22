@@ -26,11 +26,14 @@ const NewPost = ({ currentId, setCurrentId, user, setUser }) => {
   const [postData, setPostData] = useState({selectedFile: '', description: '', username: '', original_poster: ''});
 
   const [username, setUserName] = useState("");
-  useEffect(async () => {
+  useEffect( () => {
+    async function setUsernamefunc(){
     setUserName(
       await JSON.parse(localStorage.getItem("userInfo")
       )
     );
+    }
+    setUsernamefunc();
   }, []);
 
   

@@ -11,11 +11,24 @@ const MyProfile = ({ currentId,setCurrentId, user, setUser }) => {
 
 
   const [username, setUserName] = useState("");
-  useEffect(async () => {
-    setUserName(
-      await JSON.parse(localStorage.getItem("userInfo")
-      )
-    );
+  // useEffect(async () => {
+  //   setUserName(
+  //     await JSON.parse(localStorage.getItem("userInfo")
+  //     )
+  //   );
+  // }, []);
+
+  useEffect(() => {
+    async function fetchUsername() {
+      setUserName(
+        await JSON.parse(localStorage.getItem("userInfo")
+        )
+        );
+        
+    }
+    fetchUsername();
+    
+
   }, []);
 
   if (!username) {

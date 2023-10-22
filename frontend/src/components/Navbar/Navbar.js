@@ -15,11 +15,21 @@ import useStyles from './styles';
 const Navbar = (props ) => {
   const navigate = useNavigate()
   const [username, setUserName] = useState("");
-  useEffect(async () => {
-    setUserName(
-      await JSON.parse(localStorage.getItem("userInfo")
+  // useEffect(async () => {
+  //   setUserName(
+  //     await JSON.parse(localStorage.getItem("userInfo")
+  //     )
+  //   );
+  // }, [navigate]);
+
+  useEffect(() => {
+     async function getUsername(){ 
+      await setUserName(
+       JSON.parse(localStorage.getItem("userInfo")
       )
     );
+      }
+      getUsername();
   }, [navigate]);
   
   const dispatch = useDispatch();
