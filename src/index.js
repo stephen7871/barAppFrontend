@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ChakraProvider } from "@chakra-ui/react";
+//import { ChakraProvider } from "@chakra-ui/react";
 
 import { BrowserRouter } from "react-router-dom";
 import thunk from 'redux-thunk';
@@ -16,13 +16,13 @@ const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <Provider store={store}>
-  <ChakraProvider>
+
     <BrowserRouter>
      
         <App />
      
     </BrowserRouter>
-  </ChakraProvider>
+
   </Provider>,
 
   document.getElementById("root")
